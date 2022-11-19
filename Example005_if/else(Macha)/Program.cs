@@ -5,14 +5,16 @@
 // *ИНАЧЕ поприветсвовать по обычному
 // *Конец
 
+
+Console.WriteLine("Введите имя");
 string username = Console.ReadLine();
 
-if (username == "Маша")  //ToLower - команда позволяет переводить символы в нижный регистр
+if (username.ToLower() == "маша")   //ToLower - команда позволяет переводить символы в нижный регистр
 {
-    Console.WriteLine("Ура, это же Маша!");
+    Console.WriteLine("Ура это, Маша!");
 }
-else
+else 
 {
-    Console.Write("Привет, ");
+    Console.Write("Привет, "); 
     Console.WriteLine(username);
 }
