@@ -1,8 +1,13 @@
-﻿int Max (int arg1, int arg2, int arg3){
-    int result = arg1;  
-    if (arg2>result) result = arg2;
-    if (arg3>result) result = arg3;
-    return result;
+﻿// Задача:
+// Поиск максимума из 9 чисел. Применяем метод классического "стихийного подхода", а так же метода "функии".
+
+// Способ использующий функции (они же в C# "методы"):
+int Max(int arg1, int arg2, int arg3)       //функция Max c  некоторыми аргументами arg
+{
+    int result = arg1;
+    if (arg2 > result) result = arg2;
+    if (arg3 > result) result = arg3;      //тело метода {}
+    return result;                        //возвращаемое значение
 }
 
 int a1 = 12125;
@@ -15,8 +20,8 @@ int a3 = 13;
 int b3 = 23;
 int c3 = 33;
 
-
-// int max = a1;
+// Способ использующий классический "стихийный подход":
+// // int max = a1;
 // if (b1>max) max=b1;
 // if (c1>max) max=c1;
 
@@ -32,9 +37,11 @@ int c3 = 33;
 // int max2 = Max(a2,b2,c2); 
 // int max3 = Max(a3,b3,c3);
 
+// Передаём внутри аргумента функцию:
 int max = Max(
-    Max(a1,b1,c1),
-    Max(a2,b2,c2),
-    Max(a3,b3,c3)
+    Max(a1, b1, c1),
+    Max(a2, b2, c2),
+    Max(a3, b3, c3)
 );
+
 Console.WriteLine($"Максимальное {max}");
